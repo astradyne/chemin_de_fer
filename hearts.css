@@ -1,0 +1,65 @@
+.card {
+    border: 1px solid black;
+    width: 15em;
+    height: 22em;
+    border-radius: 17px;
+    position: relative;
+
+}
+.heart_top {
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    text-align: center;
+    width: 4em;
+    height: auto;
+}
+
+.heart_top span {
+    color: rgb(133, 18, 18);
+    font-size: 2em;
+    padding-left: 4px;
+}
+.heart_top img {
+    width: 2em;
+    height: 2em;
+    padding: 0px;
+    margin: 0px;  
+}
+
+
+.heart_bottom {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 17em;
+    left: 11em;
+    text-align: center;
+    width: 4em;
+    height: auto;
+
+}
+
+.heart_bottom span {
+    color: rgb(133, 18, 18);
+    font-size: 2em;
+    padding-left: 4px;
+}
+.heart_bottom img {
+    width: 2em;
+    height: 2em;
+    padding: 0px;
+    margin: 0px;  
+}
+
+.middle {
+    position: absolute;
+    top: 7em;
+    left: 3.5em;
+
+}
+.middle img {
+    width: 8em;
+    height: 8em;
+}
+
+
