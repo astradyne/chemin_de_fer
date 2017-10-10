@@ -1,0 +1,50 @@
+.card{
+    background-color: #F0F7E8;
+    padding:2em;
+    width: 10.5em;
+    height:21em!important;
+    border: 1px solid #DFDEDE;
+    display: flex;
+    border-radius: 1em;
+    position:relative;
+   
+    
+
+}
+.card .top{
+    position:absolute;
+    top: 0.4em;
+    left:0.4em;
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    
+    
+
+}
+.top img{
+    width:1em; 
+    height: auto;
+    position: absolute;
+    top:1.2em;
+    left:-0.1em;
+}
+
+.card .bottom{
+    position:absolute;
+    bottom: 0.4em;
+    right:0.5em;
+    transform: rotate(180deg);
+    font-size: 1.3em;
+    font-weight: bold;
+    
+
+}
+.bottom img{
+    width:1em; 
+    height: auto;
+    position: absolute;
+    bottom:-1.2em;
+    right:-0.1em;
+
+}
