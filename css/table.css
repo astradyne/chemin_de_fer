@@ -44,7 +44,11 @@ body{
     position:absolute;
     margin-left:60em;
     margin-top: 3em;
-    
+}
+
+.deck-wrapper{
+    position:relative;
+
 }
 .dealer h1{
     color: rgb(172, 2, 2);
@@ -108,11 +112,4 @@ body{
 .button {
     display: flex;
     flex-direction: row;
-}
-.card{
-    position: absolute;
-    padding: 2em;
-    transform:rotate(45deg);
-    margin-left:60em;
-    margin-top: 7.1em;
 }

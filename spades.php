@@ -13,13 +13,7 @@ include_once 'php/number.php';
 </head>
 <body>
     
-    <?php 
-    
-foreach($deck as $crd){
-    echo $crd;
-}
-    
-    ?>
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"

@@ -1,13 +1,15 @@
 .card{
     background-color: #F0F7E8;
-    padding:2em;
     width: 5em;
     height:10em;
     border: 1px solid #DFDEDE;
-    display: flex;
     border-radius: 1em;
-    position:relative;
-    display: block;
+    position: absolute;
+    padding: 2em;
+    top:-2em;
+    left:-2em
+    
+
  }
  
  .card.flipped .back{
