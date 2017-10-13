@@ -12,14 +12,16 @@ class card
     <div class="top">
     <span>'.$this->value.'</span>'
     .'<img src="faces-suits/'.$this->color.'.png">'.    
-   ' </div>
-    
-    <div class="bottom">
-    <span>'.$this->value.'</span>'
-    .'<img src="faces-suits/'.$this->color.'.png">'. 
+   ' </div>'.
+     //f($this->value)
+     //{}
+    '<div class="bottom">
+    <span>'.$this->value.'</span>'.
+    '<img src="faces-suits/'.$this->color.'.png">'. 
     '</div>
     </div>';
-   
+      
 }
+
 
 }
