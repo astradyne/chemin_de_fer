@@ -11,12 +11,12 @@ $colors=[
    ];
 
 
-
+   
    foreach($values as $value)
    { 
        foreach ($colors as $color)
         {
-            $card= new card();
+            $card = new card();
             $card->value=$value;
             $card->color=$color;
     echo $card;

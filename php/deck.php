@@ -1,32 +1,41 @@
 <?php
-include_once 'array.php';
+include_once 'number.php';
+// print_r($card);
 
-//echo $card;
-//$list = $card;
-//var_dump($list);
 
-//echo(spl_object_hash($card));
 
-print_r($card);
+$values=[
+    'A','2','3','4','5','6','7','8','9','10','J','Q','K'
+];
+
+$colors=[
+    'spades','hearts', 'clubs','diamonds'
+];
+
+
+$deck =[];
+foreach($values as $value)
+{ 
+    foreach ($colors as $color)
+     {
+         $card = new card();
+         $card->value=$value;
+         $card->color=$color;
+
+         $deck[] = $card;
+}
+}
+
+//foreach($deck as $crd) {
+ //   echo($crd);
+//    echo '<br>';
+//}
+shuffle($deck);
+
+echo '<br>';
+foreach($deck as $crd) {
+    echo($crd);
+    echo '<br>';
+}
 
 ?>
-
-
-
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/spades.css">
-</head>
-<body>
-    <?php //echo $card;?>
-    
-</body>
-</html>
--->

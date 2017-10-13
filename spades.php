@@ -1,6 +1,7 @@
 <?php
-include_once 'php/array.php';
+// include_once 'php/array.php';
 include_once 'php/number.php';
+include_once 'php/deck.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@ include_once 'php/number.php';
     <link rel="stylesheet" href="css/spades.css">
 </head>
 <body>
-    <?php echo $card;?>
+    <?php echo $crd;?>
     
 </body>
 </html>
