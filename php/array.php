@@ -24,7 +24,7 @@ $colors=[
 
    //shuffle($deck);
    //print_r($deck);
- 
+   
    $deck=[];
    foreach($values as $value)
    { 
@@ -34,9 +34,48 @@ $colors=[
             $card->value=$value;
             $card->color=$color;
 
-            $deck[] = $card;
-           
-    
+            switch ($value) {
+                case "A":
+                    $card->score=11;
+                    break;
+                case "2":
+                    $card->score=2;
+                    break;
+                case "3":
+                    $card->score=3;
+                    break;
+                case "4":
+                    $card->score=4;
+                    break;
+                case "5":
+                    $card->score=5;
+                    break;
+                case "6":
+                    $card->score=6;
+                    break;
+                case "7":
+                    $card->score=7;
+                    break;
+                case "8":
+                    $card->score=8;
+                    break;
+                case "9":
+                    $card->score=9;
+                    break;
+                case "10":
+                    $card->score=10;
+                    break;
+                case "J":
+                    $card->score=10;
+                    break;
+                case "Q":
+                    $card->score=10;
+                    break;
+                case "K":
+                    $card->score=10;
+                    break;
+            }
+            $deck[] = $card;   
 }
    }
 shuffle($deck);

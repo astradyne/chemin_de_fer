@@ -1,7 +1,6 @@
 <script>
-
-var playerscore = 20;
-var dealerscore = 19;
+var playerscore = null;
+var dealerscore = null;
 
 // this check if someone has reached 21
 function natural(playerscore, dealerscore) {
@@ -33,16 +32,24 @@ function lastcard(playerscore, dealerscore) {
     }
 }
 
+// INSTRUCTIONS
 // after distribution runs *natural
 // following cards runs *endagame if player takes card
 // runs *endgame + *lastcard if player donesn't take a card
 
 
-natural(playerscore, dealerscore);
-endgame(playerscore, dealerscore);
+//natural(playerscore, dealerscore);
+//endgame(playerscore, dealerscore);
 // if player takes no card
-lastcard(playerscore, dealerscore);
-
-
-
+//lastcard(playerscore, dealerscore);
 </script>
+
+<?php
+include 'array.php'; 
+
+foreach($deck as $crd){
+var_dump($crd);
+echo('<br>');
+}
+
+?>
