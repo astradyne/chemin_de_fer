@@ -12,7 +12,26 @@ include_once 'php/number.php';
     <link rel="stylesheet" href="css/spades.css">
 </head>
 <body>
-    <?php echo $card;?>
     
+    <?php 
+    
+foreach($deck as $crd){
+    echo $crd;
+}
+    
+    ?>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+       <script>
+       
+       $('.card').each(function(){
+    var value = $('.card').data('value');
+    var suite = $('.card').data('suite'); 
+});
+      
+       </script>
 </body>
 </html>
