@@ -31,10 +31,10 @@ include 'spades.php';
     <img src="cigar2.png" class="cigar" alt="cigar">
     </div>
            <div class="button">
-            <button class="button">Deal</button>
-            <button class="button">Hit</button>
-            <button class="button">Double Down</button>
-            <button class="button">Pass</button>
+            <button class="button1">Deal</button>
+            <button class="button2">Hit</button>
+            <button class="butto3">Double Down</button>
+            <button class="button4">Pass</button>
         </div> 
         <div class="player">
                 <h1>PLAYER</h1>
@@ -47,7 +47,28 @@ include 'spades.php';
        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
     <script>
+        var playerOffset = $(".player .cards").offset();
+        console.log(playerOffset.top, playerOffset.left);         
+        
+        var dealerOffset = $(".dealer .cards").offset();
+        console.log(dealerOffset.top, dealerOffset.left);
 
+        var deckOffset = $(".deck ").offset();
+        //console.log(dealerOffset.top, dealerOffset.left);
+
+        $( ".button1" ).click(function() {
+         var card = $('.card').last();
+         var player = 0;
+         var dealer = 0;
+         
+         function playerDeal(){
+             $('.card').last().css({'transform':'rotate(0deg)'}) ;
+             card.animate({'top':playerOffset.top, 'left':playerOffset.left}, 1000);};
+
+            playerDeal();
+        });
+        
+        
     </script>
 </body>
 </html>
