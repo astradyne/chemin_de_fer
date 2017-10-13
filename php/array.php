@@ -22,13 +22,10 @@ $colors=[
        'spades','hearts', 'clubs','diamonds'
    ];
 
-   $deck = array_merge ($values,$colors);
-  
-   var_dump($deck);
    //shuffle($deck);
    //print_r($deck);
  
-
+   $deck=[];
    foreach($values as $value)
    { 
        foreach ($colors as $color)
@@ -36,7 +33,13 @@ $colors=[
             $card= new card();
             $card->value=$value;
             $card->color=$color;
-    echo $card;
+
+            $deck[] = $card;
+           
     
 }
    }
+shuffle($deck);
+
+   
+   
