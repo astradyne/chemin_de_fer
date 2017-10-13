@@ -62,12 +62,12 @@ include_once 'php/number.php';
             //console.log(dealerOffset.top, dealerOffset.left);
 
             $(".button1").click(function () {
-
-                        var player = 0;
-                        var dealer = 0;
+                        var playerCards = 0;
+                        var dealerCards = 0;
+                    
 
                         function playerDeal() {
-                            var deck = $($('.card').last());
+                            var deck = $('.deck .card').last();
                             deck.css({
                                 'transform': 'rotate(0deg)'
                             });
@@ -75,28 +75,45 @@ include_once 'php/number.php';
                                     'top': playerOffset.top,
                                     'left': playerOffset.left
                                 }, 1000,
+                                
                                 function () {
                                     deck.detach().appendTo($('.player .cards'));
+                                    if(dealerCards < 2){
+                                        dealerDeal();
+                                        dealerCards++;
+                                    }
+                                
                                 }
                             );
 
-                        }
-                        playerDeal();
-
+                        };
+                        
+                        
                         function dealerDeal() {
-
+                            var deck = $('.deck .card').last();
                             deck.css({
                                 'transform': 'rotate(0deg)'
                             });
                             deck.animate({
                                 'top': dealerOffset.top,
                                 'left': dealerOffset.left
-                            }, 1000);
-                        };
+                            }, 1000, function () {
+                                    deck.detach().appendTo('.dealer .cards');
+                                    console.log(playerCards);   
+                                    if(playerCards < 2){
+                                        playerDeal();
+                                        playerCards++;
+                                    }
+                            });                
+                        }
 
-                        dealerDeal();
 
-            });                       
+                        playerDeal();
+                        playerCards++;
+
+                        
+                    });    
+                          
         </script>
     </body>
 
